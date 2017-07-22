@@ -1,0 +1,32 @@
+﻿@{ Layout = null}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MyView</title>
+</head>
+<body>
+    Welcome to MVC 5 Step by Step learning
+    <div>
+        @*@{ MVC_WebApplication1.Models.Employee emp = (MVC_WebApplication1.Models.Employee)ViewData["Employee"];}*@
+        @{
+            MVC_WebApplication1.Models.Employee emp = (MVC_WebApplication1.Models.Employee)
+                    ViewData["Employee"];
+        }
+
+    </div>
+    <table>
+        <tr>
+            <td colspan="2">Below is the scenario for Lab 3</td>
+        </tr>
+        <tr>
+            <td>First Name</td>
+            <td>@emp.FirstName</td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td>@emp.LastName</td>
+        </tr>
+    </table>
+</body>
+</html>
